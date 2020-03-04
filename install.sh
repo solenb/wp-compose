@@ -42,11 +42,17 @@ echo -n $(sudo curl -L "https://github.com/docker/compose/releases/download/1.25
 echo -ne '|################    |(80%)\r'
 sleep 1 
 echo -n $(sudo chmod +x /usr/local/bin/docker-compose > /dev/null 2>&1)
-echo -ne '|##################  |(90%)\r'
-sleep 1
+
 
 ########   Test de version Docker-Compose	########
 echo -n $(docker-compose --version)
+echo -ne '|##################  |(90%)\r'
+sleep 1
+
+
+########	Création du dossier et montage du containeur  	########
+echo -n $(cd /opt && git clone https://github.com/solenb/wp-compose.git)
+echo -n $(cd /wp-compose)
+echo -n $(docker-compose docker-compose up -d) 
 echo -ne '|####################|(100%)\r'
 echo -ne '\n'
-
