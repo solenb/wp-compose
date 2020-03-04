@@ -20,10 +20,7 @@ echo -n $(curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key
 echo -n $(sudo apt-key fingerprint 0EBFCD88 > /dev/null 2>&1)
 echo -ne '|########            |(40%)\r'
 sleep 1 
-echo -n $(sudo add-apt-repository \
-	"deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-	$(lsb_release -cs) \
-	stable" > /dev/null 2>&1)
+echo -n $(sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" > /dev/null 2>&1)
 echo -n $(sudo apt install docker-ce docker-ce-cli containerd.io > /dev/null 2>&1)
 echo -ne '|##########          |(50%)\r'
 sleep 1 
@@ -32,7 +29,7 @@ echo -ne '|############        |(60%)\r'
 sleep 1
 
 ########   Test de version Docker	########
-echo -n $(sudo docker --version)
+#echo -n $(sudo docker --version)
 echo -ne '|##############      |(70%)\r'
 sleep 1
 
