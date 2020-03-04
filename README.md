@@ -1,52 +1,17 @@
-# compose-wp
-
-##############
-Install Docker
-##############
-
-#1#
-sudo apt-get update
-
-#2#
-sudo apt-get install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    gnupg-agent \
-    software-properties-common
-    
-#3#
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-
-#4#
-sudo apt-key fingerprint 0EBFCD88
-
-#5#
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-
-#test d'installation#
-sudo docker run hello-world
-
-######################
-Install Docker-Compose
-######################
-
-#1#
-sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-
-#2#
-sudo chmod +x /usr/local/bin/docker-compose
-
-#test d'install#
-docker-compose --version
+# Docker-compose Wordpress 
+Ce script permet de dépolyer un container Docker permattant de faire tourner un service Wordpress, ainsi qu'une Base de Données MySQL.
+Ce script permet d'automatiser le déploiement d'un site web, de façon simple et rapide.
+Le scipt est uniquement disponible sur Linux (sauf distributions Arch Linux).
 
 
+## Getting started 
 
-#############################
-Pour lancer le docker-compose 
-#############################
+* ```cd /opt```
+* ```git clone https://github.com/solenb/wp-compose.git```
+* ```cd wp-compose```
+* ```chmod +x install.sh```
+* ```./install.sh```
 
-Se place dans le fichier et lancer la commande :
+## Authors
 
-docker-compose up -d 
-
+* BELLOUATI Solen, Etudiant RT2 Réseaux et Télécommunications
