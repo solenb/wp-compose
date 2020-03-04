@@ -51,7 +51,7 @@ sleep 1
 
 
 ########	Création du dossier et montage du containeur  	########
-echo -n $(cd /opt && git clone https://github.com/solenb/wp-compose.git)
+echo -n $(cd /opt)
 echo -n $(cd /wp-compose)
 echo -n $(docker-compose docker-compose up -d) 
 echo -ne '|####################|(100%)\r'
