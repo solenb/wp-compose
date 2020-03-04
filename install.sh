@@ -53,6 +53,6 @@ sleep 1
 ########	Création du dossier et montage du containeur  	########
 echo -n $(cd /opt)
 echo -n $(cd /wp-compose)
-echo -n $(docker-compose docker-compose up -d) 
+echo -n $(docker-compose up -d) 
 echo -ne '|####################|(100%)\r'
 echo -ne '\n'
