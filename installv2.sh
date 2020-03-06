@@ -1,4 +1,4 @@
-echo -n ("Lancement du script d'installation de Docker et Docker-Compose")
+echo -n "Lancement du script d'installation de Docker et Docker-Compose"
 
 apt-get update
 apt-get install -y \
