@@ -9,8 +9,8 @@ Le scipt est uniquement disponible sur Linux (sauf distributions Arch Linux).
 * ```cd /opt```
 * ```git clone https://github.com/solenb/wp-compose.git```
 * ```cd wp-compose```
-* ```chmod +x install.sh```
-* ```./install.sh```
+* ```chmod +x installv2.sh```
+* ```sudo ./installv2.sh```
 
 ## Authors
 
