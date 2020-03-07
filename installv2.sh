@@ -63,3 +63,21 @@ else
 	chmod +x /usr/local/bin/docker-compose
 
 fi
+
+dock_vers=$(docker version | sed -n "2p" | sed -e 's/ //g'|cut -d":" -f2)
+comp_vers=$(docker-compose --version | cut -d" " -f3 |sed 's/,//g')
+echo -e "Docker est installé (version $dock_vers) \n Docker Compose est installé (version $comp_vers)"
+
+
+#### Launch Wp-Compose ####
+echo -e "Voullez-vous mettre en production le containeur WordPress ? [y-n]\n"
+read quest
+if [[ $(echo $quest) = "y" ]]; then 
+	cd wp-compose
+	chmod +x installv2.sh
+	sudo ./installv2.sh
+	docker-compose up -d
+elif [[ $(echo $quest) = "n" ]]; then 
+	"	
+
+
