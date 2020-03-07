@@ -74,9 +74,6 @@ echo -e "Voullez-vous mettre en production le containeur WordPress ? [y-n]\n"
 read quest
 if [[ $(echo $quest) = "y" ]]; then 
 	echo -e "Mise en production du containeur\n"
-	cd wp-compose
-	chmod +x installv2.sh
-	sudo ./installv2.sh
 	docker-compose up -d
 elif [[ $(echo $quest) = "n" ]]; then 
 	"Vous pourrez mettre le containeur (ou utiliser un autre fichier yaml), la mise en production a été stoppé\n"
