@@ -1,9 +1,14 @@
-echo -n "Lancement du script d'installation de Docker et Docker-Compose"
+#! /bin/bash
 
+echo -en "Lancement du script d'installation de Docker et Docker-Compose"
+sleep 3
+
+
+#### Install Docker ####
 apt-get update
-apt-get install -y \
-linux-image-extra-$(uname -r) \
-linux-image-extra-virtual
+#apt-get install -y \
+#linux-image-extra-$(uname -r) \
+#linux-image-extra-virtual
 apt-get install -y \
 apt-transport-https \
 ca-certificates \
@@ -22,6 +27,7 @@ else
 	$(lsb_release -cs) \
 	stable"
 fi
+#### Install Compose ####
 apt-get update
 apt-get install -y docker-ce docker-ce-cli containerd.io
 curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
