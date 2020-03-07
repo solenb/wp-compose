@@ -6,9 +6,9 @@ sleep 3
 test_compose=$(docker-compose --version)
 test_docker=$(docker version)
 
-if [ -n "$test_docker" ];then
+if [ -n "$test_docker" ]; then
         echo -e "Docker Installé\n"
-	if [ -n "$test_compose" ];then
+	if [ -n "$test_compose" ]; then
 		echo -e "Docker-Compose Installé\n"
 	else 
 		echo -e "Docker-Compose n'est pas installé l'installation va démarrer\n"
@@ -19,6 +19,7 @@ if [ -n "$test_docker" ];then
 	ca-certificates \
 	curl \
 	software-properties-common
+	fi
 	if [  -n "$(uname -a | grep Ubuntu)" ]; then
 		curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 		add-apt-repository \
