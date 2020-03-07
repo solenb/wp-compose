@@ -76,9 +76,9 @@ if [[ $(echo $quest) = "y" ]]; then
 	echo -e "Mise en production du containeur\n"
 	docker-compose up -d
 elif [[ $(echo $quest) = "n" ]]; then 
-	echo -e "Vous pourrez mettre le containeur (ou utiliser un autre fichier yaml), la mise en production a été stoppé\n"
+	echo -e "Vous pourrez mettre le containeur (ou utiliser un autre fichier yaml), en production en effectuant la commande : \n\t docker-compose up -d"
 else
-	echo -e "La mise en production a été stoppé, veuillez remplir votre choix [y-n], en relançant le script\n"
+	echo -e "La mise en production a été stoppé, veuillez remplir correctement votre choix [y-n], en relançant le script\n"
 fi
 
 
