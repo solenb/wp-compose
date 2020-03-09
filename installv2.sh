@@ -1,7 +1,7 @@
 #! /bin/bash
 
 echo -en "Lancement du script d'installation de Docker et Docker-Compose\n"
-sleep 3
+sleep 2
 
 test_compose=$(docker-compose --version)
 test_docker=$(docker version)
