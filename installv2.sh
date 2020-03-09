@@ -66,7 +66,7 @@ fi
 
 dock_vers=$(docker version | sed -n "2p" | sed -e 's/ //g'|cut -d":" -f2)
 comp_vers=$(docker-compose --version | cut -d" " -f3 |sed 's/,//g')
-echo -e "Docker est installé (version $dock_vers) \n Docker Compose est installé (version $comp_vers)\n"
+echo -e "Docker est installé (version $dock_vers) \nDocker Compose est installé (version $comp_vers)\n"
 
 
 #### Launch Wp-Compose ####
