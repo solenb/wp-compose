@@ -1,5 +1,5 @@
 # Docker-compose Wordpress 
-Ce script permet de dépolyer un container Docker permattant de faire tourner un service Wordpress, ainsi qu'une Base de Données MySQL.
+Ce script permet de dépolyer un container Docker permettant de faire tourner un service Wordpress, ainsi qu'une Base de Données MySQL.
 Ce script permet d'automatiser le déploiement d'un site web, de façon simple et rapide.
 Le scipt est uniquement disponible sur Linux (sauf distributions Arch Linux).
 
